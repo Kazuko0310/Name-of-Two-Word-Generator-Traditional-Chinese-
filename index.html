@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script src="./name.js"></script>
+<link rel="stylesheet" href="./setofont/setofont.css">
+<script>
+//亂數Function
+function produceNum(arr){
+	var num=1;
+	var numArr=[];
+	while(numArr.length<num){
+		var newNum=Math.floor(Math.random()*arr.length);
+		if(numArr.indexOf(newNum)==-1){
+			numArr.push(arr[newNum]);
+		}
+	}
+	return numArr;
+}
+
+
+function add(){
+	return produceNum(name1500)+produceNum(name1500);
+}
+var howmany=(1500*1500);
+document.write("<p style=\"font-size:50pt\">雙字名產生器</p><hr />");
+
+document.write("<h1>");
+for (i=0;i<100;i++){
+	if (i==(100-1)){
+		var comma=" ";
+	}else{
+		var comma=", ";
+	}
+	document.write(add()+comma);
+}
+document.write("</h1>");
+
+document.write("<a href=\"index.html\"><h2>重抽</h2></a>");
+document.write("<p>擁有名字常用字庫1500字共"+howmany+"種組合</p>Kobato&copyAll Right Reserved");
+</script>
